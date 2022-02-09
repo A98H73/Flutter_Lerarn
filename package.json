@@ -1,0 +1,38 @@
+{
+  "name": "flutter_catalog",
+  "version": "1.0.0",
+  "description": "Authentication for Login page",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=Production node server",
+    "stop": "cross env NODE_ENV=development nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A98H73/Flutter_Lerarn.git"
+  },
+  "author": "Abhijeet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/A98H73/Flutter_Lerarn/issues"
+  },
+  "homepage": "https://github.com/A98H73/Flutter_Lerarn#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "jwt-simple": "^0.5.6",
+    "mongoose": "^6.2.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0"
+  }
+}
