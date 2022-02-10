@@ -10,7 +10,7 @@ mongoose.connect("mongodb://localhost:27017/myapp");
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
-app.use('/', require('./Backend/routes/user.routes'))
+app.use('/user', require('./Backend/routes/user.routes'))
 
 
 app.listen(port, () => {
