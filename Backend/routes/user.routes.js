@@ -1,6 +1,8 @@
-const express = require('express');
-const { findOneAndDelete } = require('../models/user.model');
+const express = require('express')
+const { findOneAndDelete } = require('../models/user.model')
 const User = require('../models/user.model')
+const config = require('../config')
+const jwt = require("jsonwebtoken")
 const router = express.Router()
 
 router.post('/signup', (req, res) => {
@@ -49,6 +51,16 @@ router.route('/signin').post((req, res) => {
             }
             if (result.password === req.body.password) {
                 res.json("Welcome " + result.username)
+                // Here we implement the functionality of json web token
+
+                // let token = jwt.sign({ email: req.body.email }, config.key, {
+                //     expiresIn: "24h", // JSON web token expires in 24 hours
+                // });
+
+                // res.json({
+                //     token: token,
+                //     msg: "success",
+                // });
             }
             else {
                 return res.status(403).json("Password is Incorrect");
